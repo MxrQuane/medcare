@@ -1,0 +1,142 @@
+/* Doctor Details Section Styles */
+.doctor-details {
+      padding: 60px 0;
+    }
+    
+    .doctor-info {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .doctor-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: fill;
+    }
+    
+    .doctor-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .doctor-text .specialty {
+      font-size: 20px;
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+    
+    .doctor-text .experience {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    
+    .doctor-text .bio {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* Clinic Information Styles */
+    .clinic-info {
+      margin-bottom: 40px;
+    }
+    
+    .clinic-info h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .clinic-details p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .clinic-details strong {
+      font-weight: bold;
+    }
+    
+    /* Appointment Booking Styles */
+    .appointment-booking {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .appointment-booking h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .booking-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    
+    .booking-form .form-group {
+      flex: 1 1 200px;
+    }
+    
+    .booking-form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    .booking-form input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .booking-form .btn-book {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    /* Available Times Section Styles */
+    .available-times {
+      margin-bottom: 40px;
+    }
+    
+    .available-times h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .available-times input[type="date"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    
+    .time-slots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .time-slot {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .time-slot:hover {
+      background: #0056b3;
+    }

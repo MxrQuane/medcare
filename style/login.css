@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f9f9f9;
+    }
+    
+    /* Auth Container */
+    .auth-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+    
+    /* Toggle Buttons */
+    .toggle-buttons, .toggle-buttons-2 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    
+    .toggle-buttons button, .toggle-buttons-2 button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .toggle-buttons button.active, .toggle-buttons-2 button.active {
+      background: #0056b3;
+    }
+    
+    .toggle-buttons button:hover, .toggle-buttons-2 button:hover {
+      background: #0056b3;
+    }
+    
+    /* Auth Forms */
+    .auth-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .auth-form h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #007BFF;
+    }
+    
+    .auth-form label {
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    
+    .auth-form input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+    
+    .auth-form input:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+    
+    .auth-form button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }
+    
+    .auth-form button:hover {
+      background: #0056b3;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 480px) {
+      .auth-container {
+        width: 90%;
+        padding: 20px;
+      }
+    }
+
+    /* Go Back to Home Button */
+    .btn-home {
+      color: #007BFF;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+    
+    .btn-home:hover {
+      color: #0056b3;
+    }
+
+    .doctor-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-bottom: 20px;
+    }

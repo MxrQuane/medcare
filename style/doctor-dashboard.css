@@ -1,0 +1,239 @@
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    /* More Button (Hamburger Icon) */
+    .more-button {
+      display: none; /* Hidden by default */
+      font-size: 24px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: #007BFF;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    /* Overlay Styles */
+    .overlay {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+      z-index: 998; /* Below the sidebar but above other content */
+    }
+    
+    /* Sidebar Styles */
+    .sidebar {
+      width: 250px;
+      background: #007BFF;
+      color: #fff;
+      height: 100vh; /* Full viewport height */
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      position: fixed; /* Make sidebar fixed */
+      top: 0;
+      left: 0;
+      overflow-y: auto; /* Enable scrolling if content overflows */
+      transform: translateX(0); /* Default position */
+      transition: transform 0.3s ease; /* Smooth sliding animation */
+      z-index: 999; /* Ensure sidebar is above the overlay */
+    }
+    
+    
+    .sidebar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .sidebar nav ul li {
+      margin-bottom: 20px;
+    }
+    
+    .sidebar nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      transition: background 0.3s;
+    }
+    
+    .sidebar nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar nav ul li a.active {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .sidebar nav ul li a.btn-logout {
+      background: #ff4d4d;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .sidebar nav ul li a.btn-logout:hover {
+      background: #cc0000;
+    }
+    
+    /* Main Content Styles */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      background: #f9f9f9;
+      margin-left: 250px; /* Add margin to account for fixed sidebar */
+      transition: margin-left 0.3s ease; /* Smooth transition for main content */
+    }
+    
+    
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .more-button {
+            display: block; /* Show the more button when active */
+      }
+      
+      .more-button.active {
+            display: none; /* Show the more button on small screens */
+      }
+    
+      .sidebar {
+        transform: translateX(-100%); /* Hide sidebar by default */
+      }
+    
+      .sidebar.active {
+        transform: translateX(0); /* Show sidebar when active */
+      }
+    
+      .main-content {
+        margin-left: 0; /* Remove margin when sidebar is hidden */
+      }
+    }
+
+    /* Welcome Message Styles */
+    .welcome-message h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    
+    .welcome-message p {
+      font-size: 18px;
+      color: #555;
+    }
+    
+    /* Quick Actions Styles */
+    .quick-actions {
+      display: flex;
+      gap: 20px;
+      margin: 40px 0;
+    }
+    
+    .quick-actions .btn-action {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .quick-actions .btn-action:hover {
+      background: #0056b3;
+    }
+    
+    /* Upcoming Appointments Styles */
+    .upcoming-appointments {
+      margin-bottom: 40px;
+    }
+    
+    .upcoming-appointments h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .upcoming-appointments table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .upcoming-appointments th,
+    .upcoming-appointments td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .upcoming-appointments th {
+      background: #f9f9f9;
+    }
+    
+    .upcoming-appointments .btn-view {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .upcoming-appointments .btn-view:hover {
+      background: #0056b3;
+    }
+    
+    /* Clinics Section Styles */
+    .clinics {
+      margin-bottom: 40px;
+    }
+    
+    .clinics h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .clinic-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .clinic-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: calc(50% - 10px);
+    }
+    
+    .clinic-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .clinic-card p {
+      margin-bottom: 10px;
+    }
