@@ -19,6 +19,7 @@
     
     .search-form .form-group {
       flex: 1 1 200px;
+      margin-right: 20px;
       max-width: 300px;
     }
     
@@ -62,6 +63,7 @@
     }
     
     .result-cards {
+      cursor:default;
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
@@ -80,20 +82,111 @@
       text-align: left;
     }
     
-    .result-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    h3:hover, h4:hover {
+      color: black;
+    }
+
+    h3, h4 {
+      color: #0056b3;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    h5 {
+      margin: 10px 0 0;
+      font-weight: 100;
+      font-size: 10px;
     }
     
+    .result-card .actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .result-card .actions .txt{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .result-card .actions .txt p {
+      font-size: 12px;
+    }
+
+    .result-card .actions .reviews {
+      display: flex;
+      gap: 5px;
+    }
+
+    .result-card .actions .reviews p {
+      margin: 0;
+    }
+
+    .result-card .actions .reviews > p {
+      padding: 10px;
+      background-color: #0056b3;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .result-card .actions .btn-book {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result-card .actions .btn-book:hover {
+      background-color: #004499;
+    }
+
+    .result-card h3 {
+      margin-top: 5px;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    
+    .result-card h4 {
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
     .result-card p {
       margin-bottom: 10px;
     }
-
-    .result-card .text {
-      width: 80%;
+    
+    .star {
+      width: 16px;  
+      height: 16px;
+      aspect-ratio: 1;
+      background: black;
+      clip-path: polygon(50% 0,
+        calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+        calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+        calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+        calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+       ); 
     }
 
-    .result-card img {
+    .star.active {
+      background-color: #F8CA00;
+    }
+
+    .stars {
+      display: flex;
+      gap: 5px;
+    }
+
+    .result-card .text {
+      width: 65%;
+    }
+
+    .result-card > img {
       width: 20%;
       height: 20%;
       min-height: 200px;

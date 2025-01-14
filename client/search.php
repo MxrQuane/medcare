@@ -152,10 +152,28 @@
         <div class="result-card">
           <img src="../assets/image/doctor-pfp.webp" alt="">
           <div class="text">
-            <h3 class="name">adem haine</h3>
+            <h3 class="name">adem haine</h3>           
+            <h4 class="clinic">clinic</h4>
+            <h5 class="exp">+10 years</h5>
             <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure temporibus officiis rem minima dolore debitis, culpa tempore eaque quis voluptatum reiciendis ut! Consequuntur voluptates maiores voluptatem tempora laudantium ab veritatis.</p>
           </div>
+          <div class="actions">
+            <div class="reviews">
+              <p>4.5</p>
+              <div class="txt">
+                <div class="stars">
+                  <div class="star active"></div>
+                  <div class="star active"></div>
+                  <div class="star active"></div>
+                  <div class="star active"></div>
+                  <div class="star half"></div>
+                </div>
+                <p>430 reviews</p>
+              </div>
+            </div>
+            <button class="btn-book">Book Appointment</button>
           </div>
+        </div>
         <div class="result-card">
           <img src="../assets/image/doctor-pfp.webp" alt="">
           <div class="text">
