@@ -40,7 +40,7 @@ body {
       height: 100vh; /* Full viewport height */
       padding: 20px;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-      position: fixed; /* Make sidebar fixed */
+      position: fixed; 
       top: 0;
       left: 0;
       overflow-y: auto; /* Enable scrolling if content overflows */
@@ -101,7 +101,7 @@ body {
       flex: 1;
       padding: 20px;
       background: #f9f9f9;
-      margin-left: 250px; /* Add margin to account for fixed sidebar */
+      margin-left: 290px; /* Add margin to account for fixed sidebar */
       transition: margin-left 0.3s ease; /* Smooth transition for main content */
     }
     

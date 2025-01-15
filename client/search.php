@@ -53,10 +53,7 @@
       <nav>
         <ul>
           <li><a href="../">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Clinics & Doctors</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
           <?php if ($isLoggedIn): ?>
             <!-- Display Logout Button if Logged In -->
             <li><a href="../backend/logout.php" class="btn-login">Logout</a></li>
@@ -118,25 +115,66 @@
           <label for="state">State</label>
           <select id="state" name="state">
             <option value="">Select State</option>
-            <option value="state1">State 1</option>
-            <option value="state2">State 2</option>
+            <option value="Adrar">Adrar</option>
+            <option value="Chlef">Chlef</option>
+            <option value="Laghouat">Laghouat</option>
+            <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+            <option value="Batna">Batna</option>
+            <option value="Béjaïa">Béjaïa</option>
+            <option value="Biskra">Biskra</option>
+            <option value="Béchar">Béchar</option>
+            <option value="Blida">Blida</option>
+            <option value="Bouira">Bouira</option>
+            <option value="Tamanrasset">Tamanrasset</option>
+            <option value="Tébessa">Tébessa</option>
+            <option value="Tlemcen">Tlemcen</option>
+            <option value="Tiaret">Tiaret</option>
+            <option value="Tizi Ouzou">Tizi Ouzou</option>
+            <option value="Algiers">Algiers</option>
+            <option value="Djelfa">Djelfa</option>
+            <option value="Jijel">Jijel</option>
+            <option value="Sétif">Sétif</option>
+            <option value="Saïda">Saïda</option>
+            <option value="Skikda">Skikda</option>
+            <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+            <option value="Annaba">Annaba</option>
+            <option value="Guelma">Guelma</option>
+            <option value="Constantine">Constantine</option>
+            <option value="Médéa">Médéa</option>
+            <option value="Mostaganem">Mostaganem</option>
+            <option value="M'Sila">M'Sila</option>
+            <option value="Mascara">Mascara</option>
+            <option value="Ouargla">Ouargla</option>
+            <option value="Oran">Oran</option>
+            <option value="El Bayadh">El Bayadh</option>
+            <option value="Illizi">Illizi</option>
+            <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
+            <option value="Boumerdès">Boumerdès</option>
+            <option value="El Tarf">El Tarf</option>
+            <option value="Tindouf">Tindouf</option>
+            <option value="Tissemsilt">Tissemsilt</option>
+            <option value="El Oued">El Oued</option>
+            <option value="Khenchela">Khenchela</option>
+            <option value="Souk Ahras">Souk Ahras</option>
+            <option value="Tipaza">Tipaza</option>
+            <option value="Mila">Mila</option>
+            <option value="Aïn Defla">Aïn Defla</option>
+            <option value="Naâma">Naâma</option>
+            <option value="Aïn Témouchent">Aïn Témouchent</option>
+            <option value="Ghardaïa">Ghardaïa</option>
+            <option value="Relizane">Relizane</option>
+            <option value="Timimoun">Timimoun</option>
+            <option value="Bordj Badji Mokhtar">Bordj Badji Mokhtar</option>
+            <option value="Ouled Djellal">Ouled Djellal</option>
+            <option value="Béni Abbès">Béni Abbès</option>
+            <option value="In Salah">In Salah</option>
+            <option value="In Guezzam">In Guezzam</option>
+            <option value="Touggourt">Touggourt</option>
+            <option value="Djanet">Djanet</option>
+            <option value="El M'Ghair">El M'Ghair</option>
+            <option value="El Menia">El Menia</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="municipality">Municipality</label>
-          <select id="municipality" name="municipality">
-            <option value="">Select Municipality</option>
-            <option value="municipality1">Municipality 1</option>
-            <option value="municipality2">Municipality 2</option>
-          </select>
-        </div>
-
-        <!-- Price -->
-        <!-- <div class="form-group">
-          <label for="price">Price Range</label>
-          <input type="number" id="min-price" placeholder="Min Price" name="minPrice">
-          <input type="number" id="max-price" placeholder="Max Price" name="maxPrice">
-        </div> -->
 
         <!-- Search Button -->
         <button type="submit" class="btn-search">Search</button>
@@ -146,51 +184,44 @@
 
   <!-- Results Section -->
   <section class="results">
-    <div class="container">
-      <h2>Search Results</h2>
-      <div class="result-cards">
-        <div class="result-card">
-          <img src="../assets/image/doctor-pfp.webp" alt="">
-          <div class="text">
-            <h3 class="name">adem haine</h3>           
-            <h4 class="clinic">clinic</h4>
-            <h5 class="exp">+10 years</h5>
-            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure temporibus officiis rem minima dolore debitis, culpa tempore eaque quis voluptatum reiciendis ut! Consequuntur voluptates maiores voluptatem tempora laudantium ab veritatis.</p>
-          </div>
-          <div class="actions">
-            <div class="reviews">
-              <p>4.5</p>
-              <div class="txt">
-                <div class="stars">
-                  <div class="star active"></div>
-                  <div class="star active"></div>
-                  <div class="star active"></div>
-                  <div class="star active"></div>
-                  <div class="star half"></div>
-                </div>
-                <p>430 reviews</p>
-              </div>
+  <div class="container">
+    <h2>Search Results</h2>
+    <div class="result-cards">
+      <?php if (isset($_SESSION['search_results']) && !empty($_SESSION['search_results'])): ?>
+        <?php foreach ($_SESSION['search_results'] as $result): ?>
+          <div class="result-card">
+            <img src="../assets/image/doctor-pfp.webp" alt="">
+            <div class="text">
+              <h3 class="name"><?php echo htmlspecialchars($result['doctor_name']); ?></h3>
+              <h4 class="clinic"><?php echo htmlspecialchars($result['clinic_name']); ?></h4>
+              <h5 class="exp"><?php echo htmlspecialchars($result['experience']); ?></h5>
+              <p class="bio"><?php echo htmlspecialchars($result['bio']); ?></p>
             </div>
-            <button class="btn-book">Book Appointment</button>
+            <div class="actions">
+              <div class="reviews">
+                <p><?php echo htmlspecialchars(round($result['rating'], 1)); ?></p>
+                <div class="txt">
+                  <div class="stars">
+                    <?php for ($i = 0; $i < floor($result['rating']); $i++): ?>
+                      <div class="star active"></div>
+                    <?php endfor; ?>
+                    <?php if ($result['rating'] - floor($result['rating']) >= 0.5): ?>
+                      <div class="star half"></div>
+                    <?php endif; ?>
+                  </div>
+                  <p><?php echo htmlspecialchars($result['review_count']); ?> reviews</p>
+                </div>
+              </div>
+              <button class="btn-book" onclick="window.location.href='doctor-details.php?id=<?php echo htmlspecialchars($result['doctor_id']); ?>'">Book Appointment</button>
+            </div>
           </div>
-        </div>
-        <div class="result-card">
-          <img src="../assets/image/doctor-pfp.webp" alt="">
-          <div class="text">
-            <h3 class="name">adem haine</h3>
-            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure temporibus officiis rem minima dolore debitis, culpa tempore eaque quis voluptatum reiciendis ut! Consequuntur voluptates maiores voluptatem tempora laudantium ab veritatis.</p>
-          </div>
-          </div>
-        <div class="result-card">
-          <img src="../assets/image/doctor-pfp.webp" alt="">
-          <div class="text">
-            <h3 class="name">adem haine</h3>
-            <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure temporibus officiis rem minima dolore debitis, culpa tempore eaque quis voluptatum reiciendis ut! Consequuntur voluptates maiores voluptatem tempora laudantium ab veritatis.</p>
-          </div>
-        </div>
-      </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <p>No results found.</p>
+      <?php endif; ?>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer Section (Same as Homepage) -->
   <footer>
@@ -199,14 +230,11 @@
         <h3>Quick Links</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Clinics & Doctors</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-contact">
-        <h3>Contact Us</h3>
+        <h3 id="contact-us">Contact Us</h3>
         <p>Phone: +123 456 7890</p>
         <p>Email: info@medcare.com</p>
         <p>Address: 123 Health St, City, Country</p>

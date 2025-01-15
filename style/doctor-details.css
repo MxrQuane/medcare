@@ -80,6 +80,7 @@
     
     .booking-form .form-group {
       flex: 1 1 200px;
+      margin-right: 20px;
     }
     
     .booking-form label {
@@ -88,7 +89,7 @@
       font-weight: bold;
     }
     
-    .booking-form input {
+    .booking-form input, .booking-form select {
       width: 100%;
       padding: 10px;
       border: 1px solid #ccc;
@@ -140,3 +141,123 @@
     .time-slot:hover {
       background: #0056b3;
     }
+
+    /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .close-modal {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .close-modal:hover {
+    color: #f00;
+  }
+
+  #close-modal-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #close-modal-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 5px;
+  }
+
+  .star {
+    width: 16px;  
+    height: 16px;
+    aspect-ratio: 1;
+    background: black;
+    clip-path: polygon(50% 0,
+      calc(50%*(1 + sin(.4turn))) calc(50%*(1 - cos(.4turn))),
+      calc(50%*(1 - sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+      calc(50%*(1 + sin(.2turn))) calc(50%*(1 - cos(.2turn))),
+      calc(50%*(1 - sin(.4turn))) calc(50%*(1 - cos(.4turn))) 
+     ); 
+  }
+
+  .star.active {
+    background-color: #F8CA00;
+  }
+
+  p.rating {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  .star.half {
+    background: linear-gradient(90deg, #ffd700 50%, #ccc 50%);
+  }
+  
+  .review-section {
+    margin-top: 20px;
+  }
+  
+  .review-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .review-section .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .review-section label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .review-section input[type="number"]{
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .review-section button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .review-section button:hover {
+    background-color: #0056b3;
+  }

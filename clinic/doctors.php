@@ -43,12 +43,27 @@ if (isset($_SESSION["user_id"])) {
 <body>
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="logo">Clinic Admin</div>
+    <?php 
+      $stmt = $conn->prepare("
+          SELECT c.name 
+          FROM clinics c
+          JOIN admins a ON c.clinic_id = a.clinic_id
+          WHERE a.user_id = :user_id
+      ");
+      $stmt->bindParam(":user_id", $_SESSION["user_id"]);
+      $stmt->execute();
+      $name = $stmt->fetchColumn();
+      echo "<div class='logo'>$name</div>";
+      $stmt = $conn->prepare("SELECT name FROM Users WHERE user_id = :user_id");
+      $stmt->bindParam(":user_id", $_SESSION["user_id"]);
+      $stmt->execute();
+      $name = $stmt->fetchColumn();
+      echo "<h4>$name</h2>";
+    ?>
     <nav>
       <ul>
         <li><a href="dashboard.php">Dashboard</a></li>
-        <li><a href="appointments.html">Appointments</a></li>
-        <li><a href="#patients">Patients</a></li>
+        <li><a href="appointments.php">Appointments</a></li>
         <li><a class="active">Doctors</a></li>
         <li><a href="../backend/logout.php" class="btn-logout">Logout</a></li>
       </ul>
@@ -166,6 +181,7 @@ if (isset($_SESSION["user_id"])) {
             <input type="text" id="doctor-contact" name="contact" required>
             <label for="doctor-bio">Bio:</label>
             <textarea id="doctor-bio" name="bio" rows="4" required></textarea>
+            <input type="file" name="image" accept="image/*" required>
             <button type="submit">Add Doctor</button>
           </form>
         </div>

@@ -7,7 +7,7 @@ if (isset($_SESSION["user_id"])) {
     header("Location: clinic/dashboard.php");
     exit();
   } elseif ($_SESSION["role"] == "Doctor") {
-    header("Location: doctor/dashboard.html");
+    header("Location: doctor/dashboard.php");
     exit();
   }
 }
@@ -29,9 +29,6 @@ if (isset($_SESSION["user_id"])) {
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Clinics & Doctors</a></li>
           <li><a href="#contact-us">Contact Us</a></li>
           <?php if ($isLoggedIn): ?>
             <!-- Display Logout Button if Logged In -->
@@ -80,27 +77,6 @@ if (isset($_SESSION["user_id"])) {
           <img src="assets/image/notification.avif" alt="Reminder Icon">
           <h3>Get Reminders</h3>
           <p>Receive SMS/email reminders for your appointment.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clinics & Doctors Section -->
-  <section class="clinics-doctors">
-    <div class="container">
-      <h2>Our Clinics & Doctors</h2>
-      <div class="clinic-cards">
-        <div class="clinic-card">
-          <h3>Clinic 1</h3>
-          <p>Location: City A</p>
-          <p>Specialties: General Practice, Cardiology</p>
-          <button class="btn-view-doctors">View Doctors</button>
-        </div>
-        <div class="clinic-card">
-          <h3>Clinic 2</h3>
-          <p>Location: City B</p>
-          <p>Specialties: Pediatrics, Dermatology</p>
-          <button class="btn-view-doctors">View Doctors</button>
         </div>
       </div>
     </div>
